@@ -1,25 +1,20 @@
-package kg.mega.FinalProject.models.entities;
+package kg.mega.FinalProject.models.dtos;
 
+import kg.mega.FinalProject.models.entities.Account;
+import kg.mega.FinalProject.models.entities.Channel;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.*;
-
+import javax.persistence.ManyToOne;
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-//
-@Entity
-@Table(name = "tb_advertisements")//
-public class Advertesement {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AdvertesementDto {
     Long id;
     String advertisementText;
-    @ManyToOne
     Channel channel;
-    @ManyToOne
     Account account;
+
 }

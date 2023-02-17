@@ -1,14 +1,16 @@
 package kg.mega.FinalProject.models.entities;
 
 import kg.mega.FinalProject.models.enums.PaymentStatus;
-import lombok.AccessLevel;
-import lombok.Data;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
 @Entity//
@@ -21,7 +23,6 @@ public class Order {
     Advertesement advertesement;
     @ManyToOne
     Banner banner;
-    @Enumerated(EnumType.STRING)
-    @Column(columnDefinition = "varchar(50) default 'IN_PROGRESS'")
+    @Enumerated(EnumType.ORDINAL)
     PaymentStatus status = PaymentStatus.IN_PROGRESS;
 }

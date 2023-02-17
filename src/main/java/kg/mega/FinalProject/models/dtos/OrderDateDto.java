@@ -1,9 +1,9 @@
-package kg.mega.FinalProject.models.entities;
+package kg.mega.FinalProject.models.dtos;
 
+import kg.mega.FinalProject.models.entities.Order;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 
 @Getter
@@ -11,15 +11,8 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-//
-@Entity
-@Table(name = "tb_order_date")
-public class OrderDate {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class OrderDateDto {
     Long id;
-    @OneToOne
     Order order;
     LocalDate date;
-
 }

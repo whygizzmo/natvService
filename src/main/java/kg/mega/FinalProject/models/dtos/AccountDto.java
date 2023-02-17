@@ -1,25 +1,20 @@
-package kg.mega.FinalProject.models.entities;
+package kg.mega.FinalProject.models.dtos;
 
+import kg.mega.FinalProject.models.entities.User;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.*;
+import javax.persistence.ManyToOne;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-
-@Entity
-@Table(name = "tb_accounts")
-public class Account {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AccountDto {
     Long id;
     String login;
     String password;
-    @ManyToOne
     User user;
-    //1
+
 }
