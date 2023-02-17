@@ -1,5 +1,5 @@
 package kg.mega.FinalProject.models.dtos;
-
+//
 import kg.mega.FinalProject.models.entities.Advertesement;
 import kg.mega.FinalProject.models.entities.Banner;
 import kg.mega.FinalProject.models.enums.PaymentStatus;

@@ -4,8 +4,7 @@ import kg.mega.FinalProject.models.entities.Account;
 import kg.mega.FinalProject.models.entities.Channel;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import javax.persistence.ManyToOne;
+//
 @Getter
 @Setter
 @NoArgsConstructor
